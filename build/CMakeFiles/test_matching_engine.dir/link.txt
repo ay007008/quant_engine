@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -O2 CMakeFiles/test_matching_engine.dir/tests/test_matching_engine.cpp.o -o test_matching_engine  libmatching_engine.a /usr/lib/x86_64-linux-gnu/libgtest.a -lpthread liborder_book.a 

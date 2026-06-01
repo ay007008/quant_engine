@@ -4,6 +4,7 @@
 #include <unordered_map>
 #include <string>
 #include <stdexcept>
+#include <mutex>
 #include <shared_mutex>
 
 struct Order {
@@ -17,6 +18,7 @@ class OrderBook {
 public:
     void add_order(const Order& order);
     void cancel_order(const std::string& order_id);
+    void cancel_order_quantity(double price, int quantity, bool is_bid);
     double best_bid() const;
     double best_ask() const;
     double spread() const;

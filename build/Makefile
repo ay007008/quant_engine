@@ -130,6 +130,19 @@ order_book/fast:
 .PHONY : order_book/fast
 
 #=============================================================================
+# Target rules for targets named matching_engine
+
+# Build rule for target.
+matching_engine: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matching_engine
+.PHONY : matching_engine
+
+# fast build rule for target.
+matching_engine/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matching_engine.dir/build.make CMakeFiles/matching_engine.dir/build
+.PHONY : matching_engine/fast
+
+#=============================================================================
 # Target rules for targets named test_order_book
 
 # Build rule for target.
@@ -141,6 +154,43 @@ test_order_book: cmake_check_build_system
 test_order_book/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_order_book.dir/build.make CMakeFiles/test_order_book.dir/build
 .PHONY : test_order_book/fast
+
+#=============================================================================
+# Target rules for targets named test_matching_engine
+
+# Build rule for target.
+test_matching_engine: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_matching_engine
+.PHONY : test_matching_engine
+
+# fast build rule for target.
+test_matching_engine/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_matching_engine.dir/build.make CMakeFiles/test_matching_engine.dir/build
+.PHONY : test_matching_engine/fast
+
+src/matching_engine.o: src/matching_engine.cpp.o
+.PHONY : src/matching_engine.o
+
+# target to build an object file
+src/matching_engine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matching_engine.dir/build.make CMakeFiles/matching_engine.dir/src/matching_engine.cpp.o
+.PHONY : src/matching_engine.cpp.o
+
+src/matching_engine.i: src/matching_engine.cpp.i
+.PHONY : src/matching_engine.i
+
+# target to preprocess a source file
+src/matching_engine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matching_engine.dir/build.make CMakeFiles/matching_engine.dir/src/matching_engine.cpp.i
+.PHONY : src/matching_engine.cpp.i
+
+src/matching_engine.s: src/matching_engine.cpp.s
+.PHONY : src/matching_engine.s
+
+# target to generate assembly for a file
+src/matching_engine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matching_engine.dir/build.make CMakeFiles/matching_engine.dir/src/matching_engine.cpp.s
+.PHONY : src/matching_engine.cpp.s
 
 src/order_book.o: src/order_book.cpp.o
 .PHONY : src/order_book.o
@@ -165,6 +215,30 @@ src/order_book.s: src/order_book.cpp.s
 src/order_book.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book.dir/build.make CMakeFiles/order_book.dir/src/order_book.cpp.s
 .PHONY : src/order_book.cpp.s
+
+tests/test_matching_engine.o: tests/test_matching_engine.cpp.o
+.PHONY : tests/test_matching_engine.o
+
+# target to build an object file
+tests/test_matching_engine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_matching_engine.dir/build.make CMakeFiles/test_matching_engine.dir/tests/test_matching_engine.cpp.o
+.PHONY : tests/test_matching_engine.cpp.o
+
+tests/test_matching_engine.i: tests/test_matching_engine.cpp.i
+.PHONY : tests/test_matching_engine.i
+
+# target to preprocess a source file
+tests/test_matching_engine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_matching_engine.dir/build.make CMakeFiles/test_matching_engine.dir/tests/test_matching_engine.cpp.i
+.PHONY : tests/test_matching_engine.cpp.i
+
+tests/test_matching_engine.s: tests/test_matching_engine.cpp.s
+.PHONY : tests/test_matching_engine.s
+
+# target to generate assembly for a file
+tests/test_matching_engine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_matching_engine.dir/build.make CMakeFiles/test_matching_engine.dir/tests/test_matching_engine.cpp.s
+.PHONY : tests/test_matching_engine.cpp.s
 
 tests/test_order_book.o: tests/test_order_book.cpp.o
 .PHONY : tests/test_order_book.o
@@ -198,11 +272,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... matching_engine"
 	@echo "... order_book"
+	@echo "... test_matching_engine"
 	@echo "... test_order_book"
+	@echo "... src/matching_engine.o"
+	@echo "... src/matching_engine.i"
+	@echo "... src/matching_engine.s"
 	@echo "... src/order_book.o"
 	@echo "... src/order_book.i"
 	@echo "... src/order_book.s"
+	@echo "... tests/test_matching_engine.o"
+	@echo "... tests/test_matching_engine.i"
+	@echo "... tests/test_matching_engine.s"
 	@echo "... tests/test_order_book.o"
 	@echo "... tests/test_order_book.i"
 	@echo "... tests/test_order_book.s"

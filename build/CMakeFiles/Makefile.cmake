@@ -59,5 +59,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/order_book.dir/DependInfo.cmake"
+  "CMakeFiles/matching_engine.dir/DependInfo.cmake"
   "CMakeFiles/test_order_book.dir/DependInfo.cmake"
+  "CMakeFiles/test_matching_engine.dir/DependInfo.cmake"
   )

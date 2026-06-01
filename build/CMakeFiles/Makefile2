@@ -64,7 +64,9 @@ CMAKE_BINARY_DIR = /root/quant_engine/build
 
 # The main recursive "all" target.
 all: CMakeFiles/order_book.dir/all
+all: CMakeFiles/matching_engine.dir/all
 all: CMakeFiles/test_order_book.dir/all
+all: CMakeFiles/test_matching_engine.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,7 +75,9 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/order_book.dir/clean
+clean: CMakeFiles/matching_engine.dir/clean
 clean: CMakeFiles/test_order_book.dir/clean
+clean: CMakeFiles/test_matching_engine.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -83,7 +87,7 @@ clean: CMakeFiles/test_order_book.dir/clean
 CMakeFiles/order_book.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book.dir/build.make CMakeFiles/order_book.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book.dir/build.make CMakeFiles/order_book.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/root/quant_engine/build/CMakeFiles --progress-num=1,2 "Built target order_book"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/root/quant_engine/build/CMakeFiles --progress-num=3,4 "Built target order_book"
 .PHONY : CMakeFiles/order_book.dir/all
 
 # Build rule for subdir invocation for target.
@@ -103,13 +107,39 @@ CMakeFiles/order_book.dir/clean:
 .PHONY : CMakeFiles/order_book.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/matching_engine.dir
+
+# All Build rule for target.
+CMakeFiles/matching_engine.dir/all: CMakeFiles/order_book.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matching_engine.dir/build.make CMakeFiles/matching_engine.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matching_engine.dir/build.make CMakeFiles/matching_engine.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/root/quant_engine/build/CMakeFiles --progress-num=1,2 "Built target matching_engine"
+.PHONY : CMakeFiles/matching_engine.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/matching_engine.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/quant_engine/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/matching_engine.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/quant_engine/build/CMakeFiles 0
+.PHONY : CMakeFiles/matching_engine.dir/rule
+
+# Convenience name for target.
+matching_engine: CMakeFiles/matching_engine.dir/rule
+.PHONY : matching_engine
+
+# clean rule for target.
+CMakeFiles/matching_engine.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matching_engine.dir/build.make CMakeFiles/matching_engine.dir/clean
+.PHONY : CMakeFiles/matching_engine.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/test_order_book.dir
 
 # All Build rule for target.
 CMakeFiles/test_order_book.dir/all: CMakeFiles/order_book.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_order_book.dir/build.make CMakeFiles/test_order_book.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_order_book.dir/build.make CMakeFiles/test_order_book.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/root/quant_engine/build/CMakeFiles --progress-num=3,4 "Built target test_order_book"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/root/quant_engine/build/CMakeFiles --progress-num=7,8 "Built target test_order_book"
 .PHONY : CMakeFiles/test_order_book.dir/all
 
 # Build rule for subdir invocation for target.
@@ -127,6 +157,33 @@ test_order_book: CMakeFiles/test_order_book.dir/rule
 CMakeFiles/test_order_book.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_order_book.dir/build.make CMakeFiles/test_order_book.dir/clean
 .PHONY : CMakeFiles/test_order_book.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_matching_engine.dir
+
+# All Build rule for target.
+CMakeFiles/test_matching_engine.dir/all: CMakeFiles/order_book.dir/all
+CMakeFiles/test_matching_engine.dir/all: CMakeFiles/matching_engine.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_matching_engine.dir/build.make CMakeFiles/test_matching_engine.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_matching_engine.dir/build.make CMakeFiles/test_matching_engine.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/root/quant_engine/build/CMakeFiles --progress-num=5,6 "Built target test_matching_engine"
+.PHONY : CMakeFiles/test_matching_engine.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_matching_engine.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/quant_engine/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_matching_engine.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/quant_engine/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_matching_engine.dir/rule
+
+# Convenience name for target.
+test_matching_engine: CMakeFiles/test_matching_engine.dir/rule
+.PHONY : test_matching_engine
+
+# clean rule for target.
+CMakeFiles/test_matching_engine.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_matching_engine.dir/build.make CMakeFiles/test_matching_engine.dir/clean
+.PHONY : CMakeFiles/test_matching_engine.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

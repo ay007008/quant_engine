@@ -68,3 +68,14 @@ int OrderBook::best_ask_quantity() const {
     if (asks_.empty()) return 0;
     return asks_.begin()->second;
 }
+
+void OrderBook::cancel_order_quantity(double price, int quantity, bool is_bid) {
+    std::unique_lock<std::shared_mutex> lock(book_mutex_);
+    if (is_bid) {
+        bids_[price] -= quantity;
+        if (bids_[price] <= 0) bids_.erase(price);
+    } else {
+        asks_[price] -= quantity;
+        if (asks_[price] <= 0) asks_.erase(price);
+    }
+}

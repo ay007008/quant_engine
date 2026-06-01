@@ -227,6 +227,9 @@ QuantEngine_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 QuantEngine_SOURCE_DIR:STATIC=/root/quant_engine
 
+//Dependencies for the target
+matching_engine_LIB_DEPENDS:STATIC=general;order_book;
+
 
 ########################
 # INTERNAL cache entries
